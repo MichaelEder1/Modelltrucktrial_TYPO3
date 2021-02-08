@@ -1,0 +1,11 @@
+#
+# PageTS for projekt20
+#
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:projekt20/Configuration/TsConfig/Page/RTE.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:projekt20/Configuration/TsConfig/Page/TCEFORM.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:projekt20/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:projekt20/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
+
+tx_news.templateLayouts {
+    1 = Modelltrucktrial News
+}

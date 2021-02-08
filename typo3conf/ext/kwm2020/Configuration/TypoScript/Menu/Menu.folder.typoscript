@@ -1,0 +1,7 @@
+menu.folder = TYPO3\CMS\FrontEnd\DataProcessing\MenuProcessor
+menu.folder{
+    special.value = 30
+    special.range = 1 | -1
+    includeNotInMenu = 1
+    as = folder
+}

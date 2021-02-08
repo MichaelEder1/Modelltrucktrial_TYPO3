@@ -1,0 +1,29 @@
+plugin.tx_news {
+    view {
+        templateRootPath {
+            0 = EXT:news/Resources/Private/Templates/
+            10 = EXT:kwm2020/Resources/Private/Templates/News
+        }
+
+        partialRootPath {
+            0 = EXT:news/Resources/Private/Partials/
+            10 = EXT:kwm2020/Resources/Private/Partials/News
+        }
+
+        layoutRootPath {
+            0 = EXT:news/Resources/Private/Layouts/
+            10 = EXT:kwm2020/Resources/Private/Layouts/News
+        }
+    }
+
+    settings {
+        cropMaxCharacters = 200
+        list {
+            paginate {
+                itemsPerPage = 6
+                insertAbove = false
+                insertBelow = true
+            }
+        }
+    }
+}

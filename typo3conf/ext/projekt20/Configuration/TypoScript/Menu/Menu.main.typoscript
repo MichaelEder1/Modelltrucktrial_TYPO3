@@ -1,0 +1,2 @@
+@import 'EXT:projekt20/Configuration/TypoScript/Menu/Menu.top.typoscript'
+@import 'EXT:projekt20/Configuration/TypoScript/Menu/Menu.footer.typoscript'

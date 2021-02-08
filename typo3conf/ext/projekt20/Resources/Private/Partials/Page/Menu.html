@@ -1,0 +1,33 @@
+<div class="col-lg-12 offset-md-0 text-center menu-1">
+    <f:if condition="{mainnavigation}">
+        <ul>
+            <f:for each="{mainnavigation}" as="menuItem">
+                <f:if condition="{menuItem.children}">
+                    <f:then>
+                        <f:render section="submenu" arguments="{title:menuItem.title, submenu: menuItem.children}"/>
+                    </f:then>
+                    <f:else>
+                        <li><a href="{menuItem.link}">{menuItem.title}</a></li>
+                    </f:else>
+                </f:if>
+            </f:for>
+        </ul>
+    </f:if>
+</div>
+</div>
+</div>
+</div> <!-- schließende divs' aus dem Header-->
+</nav>
+
+<f:section name="submenu">
+    <li class="has-dropdown">
+        <a href="{menuItem.link}">{title}</a>
+        <ul class="dropdown">
+            <f:for each="{submenu}" as="subItem">
+                <li><a href="{subItem.link}">{subItem.title}</a></li>
+            </f:for>
+        </ul>
+    </li>
+</f:section>
+
+

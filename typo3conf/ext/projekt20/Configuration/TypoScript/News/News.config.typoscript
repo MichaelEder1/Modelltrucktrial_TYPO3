@@ -1,0 +1,36 @@
+plugin.tx_news {
+    view {
+        templateRootPaths {
+            0 = EXT:news/Resources/Private/Templates/
+            10 = EXT:projekt20/Resources/Private/Templates/News
+        }
+
+        partialRootPaths {
+            0 = EXT:news/Resources/Private/Partials/
+            10 = EXT:projekt20/Resources/Private/Partials/News
+        }
+
+        layoutRootPaths {
+            0 = EXT:news/Resources/Private/Layouts/
+            10 = EXT:projekt20/Resources/Private/Layouts/News
+        }
+    }
+
+    settings {
+        cropMaxCharacters = 200
+        list {
+            paginate {
+                itemsPerPage = 8
+                insertAbove = false
+                insertBelow = true
+            }
+        }
+
+        media {
+            image {
+                maxWidth = 2000
+                maxHeight = 1500
+            }
+        }
+    }
+}

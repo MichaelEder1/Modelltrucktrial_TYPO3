@@ -1,0 +1,21 @@
+<!--suppress ALL -->
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="default"/>
+
+<f:section name="content">
+    <noscript>Bitte JavaScript aktivieren, um diese Seite anzuzeigen!</noscript>
+    <div class="fh5co-loader"></div>
+
+    <div id="page">
+        <div class="container-wrap">
+            <!--Start Content -->
+            <div id="fh5co-news" class="fh5co-light-grey">
+                <div class="fh5co-heading">
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos:'0'}"/>
+                </div>
+            </div>
+        </div>
+    </div><!--END Content-->
+</f:section>
+</html>

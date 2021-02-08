@@ -1,0 +1,33 @@
+<f:if condition="{data.tx_mask_newsticker}">
+    <div id="fh5co-bible-verse">
+        <div class="overlay"></div>
+        <div class="row">
+            <div class="col-lg-10 offset-md-1">
+                <div class="row animate-box">
+                    <div class="owl-carousel owl-carousel-fullwidth">
+                        <f:for each="{data.tx_mask_newsticker}" as="data_item">
+                            <div class="item">
+                                <div class="bible-verse-slide active text-center">
+                                    <f:if condition="{data_item.tx_mask_header}">
+                                        <blockquote>
+                                            <p>{data_item.tx_mask_header}</p>
+                                            <f:if condition="{data_item.tx_mask_link}">
+                                                <span class="linkTicker"><f:link.typolink parameter="{data_item.tx_mask_link}">
+                                            <f:if condition="{data_item.tx_mask_linktext}">
+                                                {data_item.tx_mask_linktext}</a>
+                                            </f:if>
+                                                </f:link.typolink>
+                                                </span>
+                                            </f:if>
+                                        </blockquote>
+                                    </f:if>
+                                </div>
+                            </div>
+                        </f:for>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</f:if>

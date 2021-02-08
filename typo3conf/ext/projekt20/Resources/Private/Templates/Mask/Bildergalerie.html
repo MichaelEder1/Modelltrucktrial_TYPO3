@@ -1,0 +1,21 @@
+<div class="container">
+    <f:if condition="{data.tx_mask_header}">
+        <h1 class="align-center">{data.tx_mask_header}</h1>
+    </f:if>
+    <div class="gallery">
+        <f:if condition="{data.tx_mask_bilder}">
+            <f:for each="{data.tx_mask_bilder}" as="file">
+                <f:link.typolink parameter='<f:uri.image image="{file}"/>'>
+                    <f:image image="{file}" alt="{file.alternative}" title="{file.title}"/>
+                </f:link.typolink>
+            </f:for>
+        </f:if>
+        <br>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.4.1/simple-lightbox.min.js"></script>
+<script>
+    (function () {
+        var $gallery = new SimpleLightbox('.gallery a', {});
+    })();
+</script>

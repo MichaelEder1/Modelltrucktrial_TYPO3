@@ -1,0 +1,21 @@
+lib.content.col0 = CONTENT
+lib.content.col0 {
+    table = tt_content
+    select {
+        orderBy = sorting
+        where = colPos=0
+        languageField = sys_language_uid
+    }
+}
+fluidLabel = TEXT
+fluidLabel.value = <b>Das kommt vom TypoScript!</b>
+
+lib.contentElement.templateRootPaths.10 = fileadmin/templates/fluid_styled_content/Resources/Private/Templates/
+page.config.contentObjectExceptionHandler = 0
+page = PAGE
+page.10 = FLUIDTEMPLATE
+page.10 {
+    file = fileadmin/templates/HTMLTemplates/index.html
+    layoutRootPath = fileadmin/templates/HTMLTemplates/Layouts/
+    partialRootPath = fileadmin/templates/HTMLTemplates/Partials/
+}

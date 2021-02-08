@@ -1,0 +1,33 @@
+<!-- Menu -->
+<nav id="menu">
+    <header class="major">
+        <h2>Menu</h2>
+    </header>
+
+    <f:if condition="{mainnavigation}">
+        <ul>
+            <f:for each="{mainnavigation}" as="menuItem">
+                <f:if condition="{menuItem.children}">
+                    <f:then>
+                        <f:render section="submenu" arguments="{title: menuItem.title, submenu: menuItem.children}"/>
+                    </f:then>
+                    <f:else>
+                        <li><a href="{menuItem.link}">{menuItem.title}</a></li>
+                    </f:else>
+                </f:if>
+            </f:for>
+        </ul>
+    </f:if>
+</nav>
+
+<f:section name="submenu">
+    <li>
+        <span class="opener">{title}</span>
+        <ul>
+            <f:for each="{submenu}" as="subItem">
+                <li><a href="{subItem.link}">{subItem.title}</a></li>
+            </f:for>
+        </ul>
+    </li>
+</f:section>
+</html>

@@ -1,0 +1,42 @@
+<f:if condition="{data.tx_mask_contentslider}">
+    <aside id="fh5co-hero">
+        <div class="flexslider">
+            <ul class="slides">
+                <f:for each="{data.tx_mask_contentslider}" as="data_item">
+                    <f:if condition="{data_item.tx_mask_backgroundimage}">
+                        <f:for each="{data_item.tx_mask_backgroundimage}" as="file">
+                            <li style="background-image:url('<f:uri.image image='{file}' />'); background-size: cover">
+                                <div class="overlay"></div>
+                                <div class="container-fluids">
+                                    <div class="row">
+                                        <div class="col-lg-6 offset-md-3 text-center">
+                        </f:for>
+                    </f:if>
+                    <f:if condition="{data_item.tx_mask_header}">
+                        <div class="slider-text">
+                            <div class="slider-text-inner text-center">
+                                <h1>{data_item.tx_mask_header}</h1>
+                    </f:if>
+                    <f:if condition="{data_item.tx_mask_linklist}">
+                        <f:for each="{data_item.tx_mask_linklist}" as="data_item_item">
+                            <f:if condition="{data_item_item.tx_mask_link}">
+                                <f:link.typolink class="btn btn-primary" parameter="{data_item_item.tx_mask_link}">
+                                    <f:if condition="{data_item_item.tx_mask_linktitle}">
+                                        <i class="fa fa-arrow-right"></i>{data_item_item.tx_mask_linktitle}</a>
+                                    </f:if>
+                                </f:link.typolink>
+                            </f:if>
+                        </f:for>
+                    </f:if>
+                </f:for>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </li>
+
+        </ul>
+        </div>
+    </aside>
+</f:if>

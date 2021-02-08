@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-12-16UTC23:14:260">
+        <header>
+            <authorName>Michael Eder</authorName>
+            <authorEmail>S1910456008@students.fh-hagenberg.at</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="lastUpdated">
+                <source>last updated:</source>
+            </trans-unit>
+
+            <trans-unit id="events">
+                <source>Events</source>
+            </trans-unit>
+
+            <trans-unit id="eventsDesc">
+                <source>Here you can find the upcoming event dates for both races and exhibitions</source>
+            </trans-unit>
+
+            <trans-unit id="newsDesc">
+                <source>Here you will find the latest news about the club and the races, including photos and results</source>
+            </trans-unit>
+
+            <trans-unit id="footerContact">
+                <source>Contact</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

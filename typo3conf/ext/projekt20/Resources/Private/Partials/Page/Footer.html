@@ -1,0 +1,58 @@
+<div class="container-wrap">
+    <footer id="fh5co-footer" role="contentinfo">
+        <div class="row">
+            <div class="col-sm text-left">
+                <h2><f:translate key="LLL:EXT:projekt20/Resources/Private/Language/locallang.xlf:footerContact" /></h2>
+                <p>Auwaldstraße 6
+                    <br>5020 Salzburg, AT
+                    <br>bert@modelltrucktrial.at</p>
+            </div>
+            <div class="col-sm text-center">
+                <h2>Modelltrucktrial</h2>
+                <f:if condition="{footerMenu}">
+                    <p>
+                        <f:for each="{footerMenu}" as="menuItem">
+                            <a href="{menuItem.link}">{menuItem.title}</a><span class="footerLink_seperator"></span>
+                        </f:for>
+                    </p>
+                </f:if>
+
+                <f:if condition="{languageNavigation}">
+                    <p>
+                        <f:for each="{languageNavigation}" as="item">
+                        <span
+                            class="{f:if(condition: item.active, then: 'active')}{f:if(condition: item.available, else: ' text-muted')} linkTicker">
+                            <f:if condition="{item.available}">
+                                <f:then>
+                                    <a href="{item.link}" hreflang="{item.hreflang}"
+                                       title="{item.navigationTitle}">{item.navigationTitle}
+                                    </a>
+                                </f:then>
+                                <f:else>
+                                    <span>{item.navigationTitle}</span>
+                                </f:else>
+                            </f:if>
+                            <span class="footerLink_seperator_language"></span>
+                        </span>
+
+                        </f:for>
+                    </p>
+                </f:if>
+                <p>
+                    <small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small><br>
+                    <small class="block">Designed by <a href="http://freehtml5.co/" rel="noopener" target="_blank">FreeHTML5.co</a>
+                    </small>
+                </p>
+            </div>
+            <div class="col-sm text-right">
+                <!-- Render Login-Formular -->
+                <f:cObject typoscriptObjectPath="lib.record">94</f:cObject>
+            </div>
+        </div>
+    </footer>
+</div>
+</div>
+
+<div class="gototop js-top">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+</div>

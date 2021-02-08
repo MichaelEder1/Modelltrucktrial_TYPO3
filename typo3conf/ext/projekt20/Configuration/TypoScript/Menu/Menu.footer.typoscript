@@ -1,0 +1,6 @@
+menu.footer = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+menu.footer {
+    special = directory
+    special.value = 69
+    as = footerMenu
+}

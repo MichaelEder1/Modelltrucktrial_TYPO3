@@ -1,0 +1,101 @@
+##############
+#### PAGE ####
+##############
+page = PAGE
+
+page.config.contentObjectExceptionHandler = 0
+
+# get login form CE
+lib.record = RECORDS
+lib.record {
+    source.data = current:1
+    source.intval = 1
+    tables = tt_content
+}
+
+page {
+    typeNum = 0
+    shortcutIcon = EXT:projekt20/Resources/Public/Icons/favicon.ico
+
+    10 = FLUIDTEMPLATE
+    10 {
+        templateName = Default
+
+        templateName = TEXT
+        templateName {
+            cObject = TEXT
+            cObject {
+                data = pagelayout
+                required = 1
+                case = uppercamelcase
+                split {
+                    token = pagets__
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+
+            ifEmpty = Default
+        }
+
+        templateName = Default
+        templateRootPaths {
+            0 = EXT:projekt20/Resources/Private/Templates/Page/
+            1 = {$page.fluidtemplate.templateRootPath}
+        }
+
+        partialRootPaths {
+            0 = EXT:projekt20/Resources/Private/Partials/Page/
+            1 = {$page.fluidtemplate.partialRootPath}
+        }
+
+        layoutRootPaths {
+            0 = EXT:projekt20/Resources/Private/Layouts/Page/
+            1 = {$page.fluidtemplate.layoutRootPath}
+        }
+
+        dataProcessing {
+            10 < menu.top
+            20 < lang.switch
+            30 < menu.footer
+        }
+    }
+
+    includeCSSLibs {
+        fontAwesome = https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+        bootstrap4_5_3 = https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css
+        flexSlider = https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css
+        owlCarousel = https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css
+        owlCarouselTheme = https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css
+        simpleLightbox = https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.4.1/simple-lightbox.css
+
+    }
+
+    includeCSS {
+        animate = EXT:projekt20/Resources/Public/Css/animate.css
+        magnific_popup = EXT:projekt20/Resources/Public/Css/magnific-popup.css
+        style = EXT:projekt20/Resources/Public/Css/style.css
+    }
+
+    includeJSLibs {
+        modernizer = https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+        jQuery3_5_1 = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js
+        bootstrap4_5_3 = https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js
+        owlCarousel = https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js
+        easing = https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js
+    }
+
+    includeJSFooter {
+        flexSlider = EXT:projekt20/Resources/Public/JavaScript/Dist/jquery.flexslider-min.js
+        wayPoints = EXT:projekt20/Resources/Public/JavaScript/Dist/jquery.waypoints.min.js
+        main = EXT:projekt20/Resources/Public/JavaScript/Dist/main.js
+        simpleLightbox = https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.4.1/simple-lightbox.min.js
+    }
+}

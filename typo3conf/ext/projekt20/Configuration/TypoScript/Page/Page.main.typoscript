@@ -1,0 +1,4 @@
+@import 'EXT:projekt20/Configuration/TypoScript/Page/Page.config.typoscript'
+@import 'EXT:projekt20/Configuration/TypoScript/Page/Page.meta.typoscript'
+@import 'EXT:projekt20/Configuration/TypoScript/Menu/Menu.main.typoscript'
+@import 'EXT:projekt20/Configuration/TypoScript/Page/Page.typoscript'

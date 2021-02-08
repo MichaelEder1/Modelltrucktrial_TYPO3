@@ -1,0 +1,18 @@
+{
+    "name": "university-of-applied-science-upper-austria/projekt20",
+    "type": "typo3-cms-extension",
+    "description": "KWM Projekt 2020 CMS",
+    "homepage": "https://projekt20.s1910456008.student.kwmhgb.at",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "typo3/cms-core": "^10.2",
+        "typo3/cms-rte-ckeditor": "^10.2",
+        "typo3/cms-fluid-styled-content": "^10.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "UniversityOfAppliedScienceUpperAustria\\Projekt20\\": "Classes/"
+        }
+    }
+}

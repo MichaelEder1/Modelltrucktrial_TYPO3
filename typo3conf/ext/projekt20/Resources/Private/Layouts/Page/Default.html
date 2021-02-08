@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<!-- Wrapper -->
+<div id="wrapper">
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <!-- Header -->
+            <f:render partial="header" arguments="{_all}"/>
+            <!-- Menu -->
+            <f:render partial="menu" arguments="{_all}"/>
+            <!-- Main Content of Page -->
+            <f:render section="content" />
+        </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer">
+        <div class="inner">
+            <f:render partial="footer" arguments="{_all}"/>
+        </div>
+    </div>
+</div>
+</html>

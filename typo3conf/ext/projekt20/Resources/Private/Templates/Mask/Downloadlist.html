@@ -1,0 +1,27 @@
+<f:if condition="{data.tx_mask_updated}">
+    <span class="lastUpdated">
+        <f:translate key="LLL:EXT:projekt20/Resources/Private/Language/locallang.xlf:lastUpdated" /> <f:format.date format="d.m.Y">{data.tx_mask_updated}</f:format.date>
+    </span>
+</f:if>
+<br>
+<span class="text-left">
+    <f:if condition="{data.tx_mask_heading}">
+    <h5>{data.tx_mask_heading}</h5>
+</f:if>
+
+<f:if condition="{data.tx_mask_downloadlist}">
+    <div class="list-group">
+        <f:for each="{data.tx_mask_downloadlist}" as="data_item">
+            <f:if condition="{data_item.tx_mask_downloadlink}">
+                <f:link.typolink parameter="{data_item.tx_mask_downloadlink}"
+                                 class="list-group-item list-group-item-action" additionalAttributes="{download: 'true'}">
+                    <f:if condition="{data_item.tx_mask_linktext}">
+                        {data_item.tx_mask_linktext}
+                    </f:if>
+                </f:link.typolink>
+            </f:if>
+        </f:for>
+    </div>
+</f:if>
+    <br>
+</span>

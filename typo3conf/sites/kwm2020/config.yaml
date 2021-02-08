@@ -1,0 +1,20 @@
+base: 'http://cms20.s1910456008.student.kwmhgb.at/'
+baseVariants: {  }
+errorHandling: {  }
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: '0'
+    base: /
+    typo3Language: de
+    locale: de_DE.UTF-8
+    iso-639-1: de
+    navigationTitle: Deutsch
+    hreflang: de-at
+    direction: ltr
+    flag: at
+    websiteTitle: ''
+rootPageId: 1
+routes: {  }
+websiteTitle: 'KWM 2020'
